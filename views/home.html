@@ -1,0 +1,23 @@
+{{> head}}
+
+<body>
+    <main>
+        {{> nav}}
+
+        <h3>{{heading}}</h3>
+
+        {{#if message}}
+        <p class="alert">{{message}}</p>
+        {{/if}}
+
+        <article>
+            <ol>
+                {{#each articles}}
+                <li><a href="{{url}}" target="_blank">{{title}}</a></li>
+                {{/each}}
+            </ol>
+        </article>
+    </main>
+</body>
+
+</html>

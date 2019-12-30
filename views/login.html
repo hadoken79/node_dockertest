@@ -1,0 +1,35 @@
+{{> head}}
+
+<body>
+    <main>
+        {{> nav}}
+
+        <div class="content-panel">
+
+            <form method="POST" action="/login">
+
+                <fieldset>
+                    <h3>{{heading}}</h3>
+                    {{#if loginFailed}}
+                    <p class="alert">invalid username or password!</p>
+                    {{/if}}
+
+                    <p>
+
+                        <label class="form-label" for="">Username</label>
+                        <input type="text" class="text-input" id="username" name="username" value="{{uname}}">
+                    </p>
+                    <p>
+                        <label class="form-label" for="">Password</label>
+                        <input type="password" class="text-input" id="password" name="password">
+                    </p>
+                    <p>
+                        <input type="submit" value="Login">
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
